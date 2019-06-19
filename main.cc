@@ -59,8 +59,7 @@ int main(int argc, char *argv[]) {
                     auto ss_board = make_shared<ifstream>(filename);
                     b.makeboard(ss_board);
                     IsBoardCreated = true;
-                } 
-				else if (input == "load" && !IsBoardCreated) {
+                } else if (input == "load" && !IsBoardCreated) {
                     ifstream f_load(argv[++i_args]);
                     string load_info;
                     if(f_load.is_open()) {
@@ -93,10 +92,10 @@ int main(int argc, char *argv[]) {
                     IsGameStarted = true;
                 } else if (input == "random-board" && !IsBoardCreated) {
                     b.init();
-					IsBoardCreated = true;
-					#ifdef DEBUG
-					cout << "random-board is generated." << endl;
-					#endif
+		    IsBoardCreated = true;
+		    #ifdef DEBUG
+		    cout << "random-board is generated." << endl;
+		    #endif
                 }
                 ++i_args;
             }
